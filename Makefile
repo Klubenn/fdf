@@ -28,7 +28,7 @@ $(MLX_DIR)$(MLX):
 	make -C $(MLX_DIR)
 
 $(NAME): $(SRC) $(INCL) $(LIBFTLIB) $(LIBMLX)
-	gcc $(FLAGS) $(SRC) -I$(INCL_DIR) -I$(LIBFT_DIR) -L$(LIBFT_DIR) -$(LIBFT) \
+	gcc $(FLAGS) $(SRC) -I$(INCL_DIR) -I $(MLX_DIR) -I$(LIBFT_DIR) -L$(LIBFT_DIR) -$(LIBFT) \
 	-L$(MLX_DIR) -$(MLX) $(FLAGS_MLX) -o $(NAME)
 
 clean:
